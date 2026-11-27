@@ -21,7 +21,11 @@ public class Saterite {
     public String getNombre() {
         return nombre;
     }
+    try{
 
+    } catch(Exception e){
+        System.out.println("Error: " + e.getMessage());
+    }
     public String getSaterite() {
         return Saterite;
     }
