@@ -8,6 +8,20 @@ public class Planetas {
     private Double temperatura;
     private Boolean atmosfera;
     private Boolean errante;
+    final private Integer id;
+
+
+
+    public Planetas(List<Saterite> Saterites, Boolean atmosfera, Boolean errante, String nombre, String tamanio, Double temperatura, TipoPlaneta tipo, Integer id) {
+        this.Saterites = Saterites;
+        this.atmosfera = atmosfera;
+        this.errante = errante;
+        this.nombre = nombre;
+        this.tamanio = tamanio;
+        this.temperatura = temperatura;
+        this.tipo = tipo;
+        this.id=id;
+    }
 
     public String getNombre() {
         return nombre;
@@ -67,7 +81,11 @@ public class Planetas {
 
     @Override
     public String toString() {
-        return "Planetas [nombre=" + nombre + ", tamanio=" + tamanio + ", tipo=" + tipo + ", Saterites=" + Saterites+ ", temperatura=" + temperatura + ", atmosfera=" + atmosfera + ", errante=" + errante + "]";
+        return "Planetas [Planeta " + nombre +"\n" + (getErrante()==true?"\nEs errante":"\nNo es errante") +"]";
+    }
+
+    public Integer getId() {
+        return id;
     }
 
    
